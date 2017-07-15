@@ -30,6 +30,7 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -37,25 +38,34 @@ public class MainFrame extends javax.swing.JFrame {
 
         jButton2.setText("jButton2");
 
+        jLabel1.setText("jLabel1");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(139, 139, 139)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1))
-                .addContainerGap(139, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(jButton1)
+                        .addGap(60, 60, 60)
+                        .addComponent(jButton2))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(157, 157, 157)
+                        .addComponent(jLabel1)))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(111, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(18, 18, 18)
-                .addComponent(jButton2)
-                .addGap(60, 60, 60))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(68, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(42, 42, 42)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
+                .addGap(95, 95, 95))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -116,6 +126,7 @@ public class MainFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
