@@ -6,6 +6,9 @@
 package com.oop.waterbill;
 
 import java.awt.Color;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Panel;
 import javax.swing.ImageIcon;
 
 /**
@@ -15,11 +18,31 @@ import javax.swing.ImageIcon;
 public class Menu extends javax.swing.JFrame {
     final Color blue = new Color(33   , 63, 87);
     final Color white = new Color(253  , 253, 253);
+    GridBagLayout layout = new GridBagLayout();
+     GridBagConstraints c = new GridBagConstraints();
+    RecordsPanel records;
+    PaymentPanel payment;
     /**
      * Creates new form Menu
      */
     public Menu() {
         initComponents();
+        records = new RecordsPanel();
+        payment = new PaymentPanel();
+        DynamicPanel.setLayout(layout);
+       
+        c.gridx = 0;
+       c.gridy = 0;
+       DynamicPanel.add(payment,c);
+       DynamicPanel.add(records,c);
+        //payment.setVisible(true);
+        //records.setVisible(false);
+
+        paymenttext.setForeground(blue);
+        paymenticon.setIcon(new ImageIcon("src\\com\\oop\\waterbill\\Paycheque_35px_2.png"));
+        paymentpanel.setBackground(white);
+        resetColor(1);
+
     }
 
     /**
@@ -44,6 +67,7 @@ public class Menu extends javax.swing.JFrame {
         inputtext = new javax.swing.JLabel();
         inputicon = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
+        DynamicPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -122,15 +146,29 @@ public class Menu extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(253, 253, 253));
 
+        javax.swing.GroupLayout DynamicPanelLayout = new javax.swing.GroupLayout(DynamicPanel);
+        DynamicPanel.setLayout(DynamicPanelLayout);
+        DynamicPanelLayout.setHorizontalGroup(
+            DynamicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 680, Short.MAX_VALUE)
+        );
+        DynamicPanelLayout.setVerticalGroup(
+            DynamicPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 480, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 680, Short.MAX_VALUE)
+            .addComponent(DynamicPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 520, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(DynamicPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 0, 680, 520));
@@ -165,6 +203,7 @@ public class Menu extends javax.swing.JFrame {
         recordicon.setIcon(new ImageIcon("src\\com\\oop\\waterbill\\Business Contact_35px_2.png"));
         recordpanel.setBackground(white);
         resetColor(2);
+       // records.setVisible(true);
     }//GEN-LAST:event_recordpanelMousePressed
 
     private void inputpanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_inputpanelMousePressed
@@ -186,7 +225,7 @@ public class Menu extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -211,7 +250,8 @@ public class Menu extends javax.swing.JFrame {
     }
 
     public void resetColor(int choice){
-    
+     c.gridx = 0;
+        c.gridy = 0;
         switch(choice){
             case 1:
                 recordtext.setForeground(white);
@@ -220,6 +260,12 @@ public class Menu extends javax.swing.JFrame {
         inputtext.setForeground(white);
         inputicon.setIcon(new ImageIcon("src\\com\\oop\\waterbill\\Plus_25px.png"));
         inputpanel.setBackground(blue);
+         //DynamicPanel.remove(records);
+        //DynamicPanel.add(payment,c);
+        //DynamicPanel.add(records,c);
+        //payment.setVisible(false);
+        records.setVisible(false);
+        payment.setVisible(true);
                 break;
             case 2:
                  inputtext.setForeground(white);
@@ -228,7 +274,13 @@ public class Menu extends javax.swing.JFrame {
          paymenttext.setForeground(white);
         paymenticon.setIcon(new ImageIcon("src\\com\\oop\\waterbill\\Paycheque_35px.png"));
         paymentpanel.setBackground(blue);
-                break;
+         //DynamicPanel.remove(payment);
+        //DynamicPanel.add(records,c);
+       
+       
+records.setVisible(true); 
+payment.setVisible(false);
+        break;
             case 3:
                 paymenttext.setForeground(white);
         paymenticon.setIcon(new ImageIcon("src\\com\\oop\\waterbill\\Paycheque_35px.png"));
@@ -236,6 +288,7 @@ public class Menu extends javax.swing.JFrame {
         recordtext.setForeground(white);
         recordicon.setIcon(new ImageIcon("src\\com\\oop\\waterbill\\Business Contact_35px_1.png"));
         recordpanel.setBackground(blue);
+        records.setVisible(false);
                 break;
             default:
                 break;
@@ -250,6 +303,7 @@ public class Menu extends javax.swing.JFrame {
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel DynamicPanel;
     private javax.swing.JLabel inputicon;
     private javax.swing.JPanel inputpanel;
     private javax.swing.JLabel inputtext;
