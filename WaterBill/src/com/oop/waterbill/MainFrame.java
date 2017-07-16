@@ -36,7 +36,7 @@ public class MainFrame extends javax.swing.JFrame {
         jButton1.setText("jButton1");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel1.setText("jLabel1");
+        jLabel1.setText("Pogi net");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
