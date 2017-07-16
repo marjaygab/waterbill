@@ -5,11 +5,14 @@
  */
 package com.oop.waterbill;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author User
  */
 public class MainFrame extends javax.swing.JFrame {
+    Login con=new Login();
 
     /**
      * Creates new form MainFrame
@@ -98,6 +101,11 @@ public class MainFrame extends javax.swing.JFrame {
         jPasswordField1.setForeground(new java.awt.Color(253, 253, 253));
         jPasswordField1.setText("jPasswordField1");
         jPasswordField1.setBorder(null);
+        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 230, 30));
 
         jButton1.setBackground(new java.awt.Color(95, 210, 195));
@@ -146,9 +154,30 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
-        new Menu().setVisible(true);
+       int a,d=1;
+String b=jTextField1.getText();
+String c=jPasswordField1.getText();
+   
+a=con.getData(b,c);
+
+if(a==1&&d==1){
+    
+    this.setVisible(false);
+    new Menu().setVisible(true);
+    
+}
+else if (a!=1&&d==1){
+    JOptionPane.showMessageDialog(null, "Access Not Granted");
+    
+}
+    
+    
+  
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField1ActionPerformed
     
     /**
      * @param args the command line arguments
@@ -180,7 +209,7 @@ public class MainFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainFrame().setVisible(true);
+            new MainFrame().setVisible(true);
             }
         });
     }
