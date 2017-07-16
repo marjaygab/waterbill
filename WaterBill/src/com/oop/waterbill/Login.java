@@ -20,7 +20,7 @@ public class Login {
     public Login() {
         try{
         Class.forName("com.mysql.jdbc.Driver");
-        con=DriverManager.getConnection("jdbc:mysql://localhost:3306/loggingin", "root", "");
+        con=DriverManager.getConnection("jdbc:mysql://192.168.1.3:3306/loggingin", "root", "password");
         st=con.createStatement();
         }catch (Exception ex){
             System.out.println("Error: " + ex);
