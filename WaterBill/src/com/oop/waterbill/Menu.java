@@ -120,7 +120,7 @@ public class Menu extends javax.swing.JFrame {
         recordicon.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         recordpanel.add(recordicon, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, 20));
 
-        jPanel2.add(recordpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 190, 40));
+        jPanel2.add(recordpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 190, 40));
 
         inputpanel.setBackground(new java.awt.Color(33, 63, 87));
         inputpanel.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -140,11 +140,12 @@ public class Menu extends javax.swing.JFrame {
         inputicon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/oop/waterbill/Plus_25px.png"))); // NOI18N
         inputpanel.add(inputicon, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 5, 30, -1));
 
-        jPanel2.add(inputpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 190, 40));
+        jPanel2.add(inputpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 190, 40));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 210, 520));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 210, 560));
 
         jPanel3.setBackground(new java.awt.Color(253, 253, 253));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         javax.swing.GroupLayout DynamicPanelLayout = new javax.swing.GroupLayout(DynamicPanel);
         DynamicPanel.setLayout(DynamicPanelLayout);
@@ -157,21 +158,9 @@ public class Menu extends javax.swing.JFrame {
             .addGap(0, 480, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(DynamicPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(DynamicPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(34, Short.MAX_VALUE))
-        );
+        jPanel3.add(DynamicPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 56, -1, -1));
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 0, 680, 520));
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 0, 680, 560));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
