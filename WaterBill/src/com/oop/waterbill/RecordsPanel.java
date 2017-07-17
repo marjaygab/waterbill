@@ -17,10 +17,10 @@ public class RecordsPanel extends javax.swing.JPanel {
     public RecordsPanel() {
         initComponents();
         
-        choice1.add("Date");
-        choice1.add("Bill");
-        choice2.add("Ascending");
-        choice2.add("Descending");
+        categrecordcombo.add("Date");
+        categrecordcombo.add("Bill");
+        orderrecordcombo.add("Ascending");
+        orderrecordcombo.add("Descending");
         
         
     }
@@ -36,25 +36,25 @@ public class RecordsPanel extends javax.swing.JPanel {
 
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        recordtable = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        accountrecords = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         placeholder = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        searchrecord = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel4 = new javax.swing.JLabel();
-        choice1 = new java.awt.Choice();
+        categrecordcombo = new java.awt.Choice();
         jLabel5 = new javax.swing.JLabel();
-        choice2 = new java.awt.Choice();
+        orderrecordcombo = new java.awt.Choice();
         jLabel6 = new javax.swing.JLabel();
 
         jPanel1.setBackground(new java.awt.Color(253, 253, 253));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        recordtable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -81,11 +81,11 @@ public class RecordsPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setResizable(false);
-            jTable1.getColumnModel().getColumn(1).setResizable(false);
-            jTable1.getColumnModel().getColumn(2).setResizable(false);
+        jScrollPane1.setViewportView(recordtable);
+        if (recordtable.getColumnModel().getColumnCount() > 0) {
+            recordtable.getColumnModel().getColumn(0).setResizable(false);
+            recordtable.getColumnModel().getColumn(1).setResizable(false);
+            recordtable.getColumnModel().getColumn(2).setResizable(false);
         }
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 610, 224));
@@ -95,13 +95,18 @@ public class RecordsPanel extends javax.swing.JPanel {
         jLabel1.setText("Account Number:");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 20));
 
-        jTextField1.setBackground(new java.awt.Color(253, 253, 253));
-        jTextField1.setForeground(new java.awt.Color(186, 186, 188));
-        jTextField1.setText("Enter Account Number");
-        jTextField1.setBorder(null);
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 231, 20));
+        accountrecords.setBackground(new java.awt.Color(253, 253, 253));
+        accountrecords.setForeground(new java.awt.Color(186, 186, 188));
+        accountrecords.setText("Enter Account Number");
+        accountrecords.setBorder(null);
+        accountrecords.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                accountrecordsMousePressed(evt);
+            }
+        });
+        jPanel1.add(accountrecords, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 231, 20));
 
-        jPanel2.setBackground(new java.awt.Color(95, 210, 195));
+        jPanel2.setBackground(new java.awt.Color(218, 99, 93));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -123,24 +128,24 @@ public class RecordsPanel extends javax.swing.JPanel {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 680, 100));
 
-        jButton2.setBackground(new java.awt.Color(33, 63, 87));
-        jButton2.setFont(new java.awt.Font("Dialog", 1, 10)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Search");
-        jButton2.setContentAreaFilled(false);
-        jButton2.setOpaque(true);
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 10, 70, 20));
+        searchrecord.setBackground(new java.awt.Color(33, 63, 87));
+        searchrecord.setFont(new java.awt.Font("Dialog", 1, 10)); // NOI18N
+        searchrecord.setForeground(new java.awt.Color(255, 255, 255));
+        searchrecord.setText("Search");
+        searchrecord.setContentAreaFilled(false);
+        searchrecord.setOpaque(true);
+        jPanel1.add(searchrecord, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 10, 70, 20));
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 30, 220, 10));
 
         jLabel4.setForeground(new java.awt.Color(51, 51, 51));
         jLabel4.setText("Sort by:");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, -1, 20));
-        jPanel1.add(choice1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, 140, -1));
+        jPanel1.add(categrecordcombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, 140, -1));
 
         jLabel5.setForeground(new java.awt.Color(51, 51, 51));
         jLabel5.setText("in");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 20, 20));
-        jPanel1.add(choice2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 200, 140, -1));
+        jPanel1.add(orderrecordcombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 200, 140, -1));
 
         jLabel6.setForeground(new java.awt.Color(51, 51, 51));
         jLabel6.setText("order");
@@ -160,11 +165,15 @@ public class RecordsPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void accountrecordsMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_accountrecordsMousePressed
+        // TODO add your handling code here:
+        accountrecords.setText("");
+    }//GEN-LAST:event_accountrecordsMousePressed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private java.awt.Choice choice1;
-    private java.awt.Choice choice2;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JTextField accountrecords;
+    private java.awt.Choice categrecordcombo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -175,8 +184,9 @@ public class RecordsPanel extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
+    private java.awt.Choice orderrecordcombo;
     private javax.swing.JLabel placeholder;
+    private javax.swing.JTable recordtable;
+    private javax.swing.JButton searchrecord;
     // End of variables declaration//GEN-END:variables
 }
