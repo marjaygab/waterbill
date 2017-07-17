@@ -34,6 +34,7 @@ public class PaymentPanel extends javax.swing.JPanel {
         jSeparator1 = new javax.swing.JSeparator();
         accountpayment = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -102,6 +103,13 @@ public class PaymentPanel extends javax.swing.JPanel {
         jLabel3.setText("Payments Section");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
 
+        jButton1.setBackground(new java.awt.Color(253, 253, 253));
+        jButton1.setForeground(new java.awt.Color(131, 95, 193));
+        jButton1.setText("Enter");
+        jButton1.setContentAreaFilled(false);
+        jButton1.setOpaque(true);
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 30, -1, -1));
+
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 690, 90));
 
         jLabel4.setForeground(new java.awt.Color(51, 51, 51));
@@ -110,7 +118,7 @@ public class PaymentPanel extends javax.swing.JPanel {
 
         jLabel5.setForeground(new java.awt.Color(51, 51, 51));
         jLabel5.setText("Middle Name");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 150, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 150, -1, -1));
 
         jLabel6.setForeground(new java.awt.Color(51, 51, 51));
         jLabel6.setText("Last Name");
@@ -122,7 +130,7 @@ public class PaymentPanel extends javax.swing.JPanel {
 
         jLabel8.setForeground(new java.awt.Color(51, 51, 51));
         jLabel8.setText("Age");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 150, -1, -1));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 150, -1, -1));
 
         genderpayment.setBackground(new java.awt.Color(253, 253, 253));
         genderpayment.setForeground(new java.awt.Color(51, 51, 51));
@@ -135,15 +143,15 @@ public class PaymentPanel extends javax.swing.JPanel {
                 homepaymentActionPerformed(evt);
             }
         });
-        jPanel1.add(homepayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 380, -1));
+        jPanel1.add(homepayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 430, -1));
 
         firstpayment.setBackground(new java.awt.Color(253, 253, 253));
         firstpayment.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel1.add(firstpayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 170, 110, -1));
+        jPanel1.add(firstpayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 170, 140, -1));
 
         middlepayment.setBackground(new java.awt.Color(253, 253, 253));
         middlepayment.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel1.add(middlepayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 170, 110, -1));
+        jPanel1.add(middlepayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 170, 130, -1));
 
         previouspayment.setBackground(new java.awt.Color(253, 253, 253));
         previouspayment.setForeground(new java.awt.Color(51, 51, 51));
@@ -155,7 +163,7 @@ public class PaymentPanel extends javax.swing.JPanel {
 
         lastpayment.setBackground(new java.awt.Color(253, 253, 253));
         lastpayment.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel1.add(lastpayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 110, -1));
+        jPanel1.add(lastpayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 130, -1));
 
         jLabel10.setForeground(new java.awt.Color(51, 51, 51));
         jLabel10.setText("Area");
@@ -177,7 +185,7 @@ public class PaymentPanel extends javax.swing.JPanel {
 
         agepayment.setBackground(new java.awt.Color(253, 253, 253));
         agepayment.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel1.add(agepayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 170, 40, -1));
+        jPanel1.add(agepayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 170, 40, -1));
         jPanel1.add(coordpaymentcombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 312, 145, -1));
 
         jLabel14.setForeground(new java.awt.Color(51, 51, 51));
@@ -273,6 +281,7 @@ public class PaymentPanel extends javax.swing.JPanel {
     private javax.swing.JTextField firstpayment;
     private javax.swing.JTextField genderpayment;
     private javax.swing.JTextField homepayment;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

@@ -65,82 +65,87 @@ public class SingleInternal extends javax.swing.JPanel {
 
         jLabel6.setForeground(new java.awt.Color(51, 51, 51));
         jLabel6.setText("Last Name");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, -1, -1));
 
         lastsingleinternal.setBackground(new java.awt.Color(253, 253, 253));
         lastsingleinternal.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel1.add(lastsingleinternal, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 110, -1));
+        jPanel1.add(lastsingleinternal, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 140, -1));
 
         firstsingleinternal.setBackground(new java.awt.Color(253, 253, 253));
         firstsingleinternal.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel1.add(firstsingleinternal, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 110, -1));
+        jPanel1.add(firstsingleinternal, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, 150, -1));
 
         jLabel7.setForeground(new java.awt.Color(51, 51, 51));
         jLabel7.setText("First Name");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 70, -1, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, -1, -1));
 
         middlesingleinternal.setBackground(new java.awt.Color(253, 253, 253));
         middlesingleinternal.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel1.add(middlesingleinternal, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 90, 110, -1));
+        jPanel1.add(middlesingleinternal, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 110, 120, -1));
 
         jLabel8.setForeground(new java.awt.Color(51, 51, 51));
         jLabel8.setText("Middle Name");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 70, -1, -1));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 90, -1, -1));
 
         agesingleinternal.setBackground(new java.awt.Color(253, 253, 253));
         agesingleinternal.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel1.add(agesingleinternal, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 90, 50, -1));
+        jPanel1.add(agesingleinternal, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 110, 50, -1));
 
         jLabel9.setForeground(new java.awt.Color(51, 51, 51));
         jLabel9.setText("Age");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 70, 70, -1));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 90, 70, -1));
 
         jLabel10.setForeground(new java.awt.Color(51, 51, 51));
         jLabel10.setText("Account Number");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, -1, -1));
 
         accountsingeinternal.setBackground(new java.awt.Color(253, 253, 253));
         accountsingeinternal.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel1.add(accountsingeinternal, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 110, -1));
+        accountsingeinternal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                accountsingeinternalActionPerformed(evt);
+            }
+        });
+        jPanel1.add(accountsingeinternal, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, 110, -1));
 
         gendersingleinternal.setBackground(new java.awt.Color(253, 253, 253));
         gendersingleinternal.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel1.add(gendersingleinternal, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 90, 50, -1));
+        jPanel1.add(gendersingleinternal, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 110, 50, -1));
 
         jLabel11.setForeground(new java.awt.Color(51, 51, 51));
         jLabel11.setText("Area");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 130, 70, -1));
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 150, 70, -1));
 
         homesingleinternal.setBackground(new java.awt.Color(253, 253, 253));
         homesingleinternal.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel1.add(homesingleinternal, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, 370, -1));
+        jPanel1.add(homesingleinternal, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 370, -1));
 
         jLabel12.setForeground(new java.awt.Color(51, 51, 51));
         jLabel12.setText("Home Address");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 100, -1));
-        jPanel1.add(areainternalcombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 150, 110, -1));
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, 100, -1));
+        jPanel1.add(areainternalcombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 170, 110, -1));
 
         jLabel13.setForeground(new java.awt.Color(51, 51, 51));
         jLabel13.setText("Gender");
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 70, 70, -1));
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 90, 70, -1));
 
         jLabel14.setForeground(new java.awt.Color(51, 51, 51));
         jLabel14.setText("Coordinator");
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 70, -1));
-        jPanel1.add(coordinternalcombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 110, -1));
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, 70, -1));
+        jPanel1.add(coordinternalcombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 110, -1));
 
         metersingleinternal.setBackground(new java.awt.Color(253, 253, 253));
         metersingleinternal.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel1.add(metersingleinternal, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 120, -1));
+        jPanel1.add(metersingleinternal, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 240, 120, -1));
 
         jLabel15.setForeground(new java.awt.Color(51, 51, 51));
         jLabel15.setText("Meter No.");
-        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, 70, -1));
-        jPanel1.add(connectioninternalcombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 210, 180, -1));
+        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, 70, -1));
+        jPanel1.add(connectioninternalcombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 240, 180, -1));
 
         jLabel16.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel16.setText("Tye of Connection");
-        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, 120, -1));
+        jLabel16.setText("Type of Connection");
+        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 120, -1));
 
         jPanel2.setBackground(new java.awt.Color(134, 207, 190));
 
@@ -162,7 +167,7 @@ public class SingleInternal extends javax.swing.JPanel {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(48, 48, 48)
                         .addComponent(readingsingleinternal, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -171,10 +176,10 @@ public class SingleInternal extends javax.swing.JPanel {
                 .addComponent(jLabel17)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(readingsingleinternal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 240, 250, 80));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 270, 250, 80));
 
         jPanel3.setBackground(new java.awt.Color(253, 253, 253));
 
@@ -210,7 +215,7 @@ public class SingleInternal extends javax.swing.JPanel {
                 .addComponent(clearbuttoninternal, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(finishbuttoninternal, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -220,10 +225,10 @@ public class SingleInternal extends javax.swing.JPanel {
                     .addComponent(clearbuttoninternal, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(finishbuttoninternal, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(confirmbuttoninternal, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 330, 80));
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 330, 80));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -235,9 +240,15 @@ public class SingleInternal extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void accountsingeinternalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_accountsingeinternalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_accountsingeinternalActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

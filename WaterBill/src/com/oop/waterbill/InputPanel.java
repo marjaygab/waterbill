@@ -121,6 +121,8 @@ public class InputPanel extends javax.swing.JPanel {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 680, 80));
 
+        DynaPanel.setBackground(new java.awt.Color(253, 253, 253));
+
         javax.swing.GroupLayout DynaPanelLayout = new javax.swing.GroupLayout(DynaPanel);
         DynaPanel.setLayout(DynaPanelLayout);
         DynaPanelLayout.setHorizontalGroup(
