@@ -59,7 +59,7 @@ public class SingleInternal extends javax.swing.JPanel {
         clearbuttoninternal = new javax.swing.JButton();
         finishbuttoninternal = new javax.swing.JButton();
         confirmbuttoninternal = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         jPanel1.setBackground(new java.awt.Color(253, 253, 253));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -248,13 +248,13 @@ public class SingleInternal extends javax.swing.JPanel {
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 330, 80));
 
-        jButton1.setText("Ok");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButton2.setText("jButton2");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 50, 20));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 50, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -287,26 +287,6 @@ public class SingleInternal extends javax.swing.JPanel {
         
     }//GEN-LAST:event_confirmbuttoninternalActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-       A1Single_Bulk_Input  ok =  new A1Single_Bulk_Input();
-       ok.getAccNum(accountsingeinternal.getText());
-       
-       lastsingleinternal.setText(ok.getlast_());
-       firstsingleinternal.setText(ok.getfirst_());
-       middlesingleinternal.setText(ok.getmiddle_());
-       agesingleinternal.setText(ok.getage_());
-       gendersingleinternal.setText(ok.getgender_());
-       homesingleinternal.setText(ok.gethomeadd());
-       metersingleinternal.setText(ok.getmeterno());
-               
-
-       
-       
-        
-        
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void clearbuttoninternalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearbuttoninternalActionPerformed
         // TODO add your handling code here:
         lastsingleinternal.setText("");
@@ -321,6 +301,24 @@ public class SingleInternal extends javax.swing.JPanel {
         
     }//GEN-LAST:event_clearbuttoninternalActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        A1Single_Bulk_Input  ok =  new A1Single_Bulk_Input();
+       ok.getAccNum(accountsingeinternal.getText());
+       
+       lastsingleinternal.setText(ok.getlast_());
+       firstsingleinternal.setText(ok.getfirst_());
+       middlesingleinternal.setText(ok.getmiddle_());
+       agesingleinternal.setText(ok.getage_());
+       gendersingleinternal.setText(ok.getgender_());
+       homesingleinternal.setText(ok.gethomeadd());
+       metersingleinternal.setText(ok.getmeterno());
+               
+
+       
+       
+    }//GEN-LAST:event_jButton2ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField accountsingeinternal;
@@ -334,7 +332,7 @@ public class SingleInternal extends javax.swing.JPanel {
     private javax.swing.JTextField firstsingleinternal;
     private javax.swing.JTextField gendersingleinternal;
     private javax.swing.JTextField homesingleinternal;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
