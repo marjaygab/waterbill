@@ -34,7 +34,7 @@ public class PaymentPanel extends javax.swing.JPanel {
         jSeparator1 = new javax.swing.JSeparator();
         accountpayment = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        enterbuttonpayment = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -103,12 +103,12 @@ public class PaymentPanel extends javax.swing.JPanel {
         jLabel3.setText("Payments Section");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
 
-        jButton1.setBackground(new java.awt.Color(253, 253, 253));
-        jButton1.setForeground(new java.awt.Color(131, 95, 193));
-        jButton1.setText("Enter");
-        jButton1.setContentAreaFilled(false);
-        jButton1.setOpaque(true);
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 30, -1, -1));
+        enterbuttonpayment.setBackground(new java.awt.Color(253, 253, 253));
+        enterbuttonpayment.setForeground(new java.awt.Color(131, 95, 193));
+        enterbuttonpayment.setText("Enter");
+        enterbuttonpayment.setContentAreaFilled(false);
+        enterbuttonpayment.setOpaque(true);
+        jPanel2.add(enterbuttonpayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 30, -1, -1));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 690, 90));
 
@@ -278,10 +278,10 @@ public class PaymentPanel extends javax.swing.JPanel {
     private java.awt.Choice connectionpaymentcombo;
     private java.awt.Choice coordpaymentcombo;
     private javax.swing.JTextField currentpayment;
+    private javax.swing.JButton enterbuttonpayment;
     private javax.swing.JTextField firstpayment;
     private javax.swing.JTextField genderpayment;
     private javax.swing.JTextField homepayment;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

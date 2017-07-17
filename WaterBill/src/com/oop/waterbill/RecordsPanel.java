@@ -5,6 +5,15 @@
  */
 package com.oop.waterbill;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author User
@@ -14,7 +23,17 @@ public class RecordsPanel extends javax.swing.JPanel {
     /**
      * Creates new form RecordsPanel
      */
+    private MainFrame log = new MainFrame();
+    private  Login login = log.getCon();
+     private Connection con;
+    private Statement st;
+    private ResultSet rs;
+    
+    ArrayList column1 = new ArrayList();
+    ArrayList column2 = new ArrayList();
+    ArrayList column3 = new ArrayList();
     public RecordsPanel() {
+        
         initComponents();
         
         categrecordcombo.add("Date");
@@ -22,7 +41,8 @@ public class RecordsPanel extends javax.swing.JPanel {
         orderrecordcombo.add("Ascending");
         orderrecordcombo.add("Descending");
         
-        
+        con = login.getCon();
+        st = login.getSt();
     }
 
     /**
@@ -56,18 +76,7 @@ public class RecordsPanel extends javax.swing.JPanel {
 
         recordtable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
                 "REF. NO.", "DATE", "BILL"
@@ -134,6 +143,11 @@ public class RecordsPanel extends javax.swing.JPanel {
         searchrecord.setText("Search");
         searchrecord.setContentAreaFilled(false);
         searchrecord.setOpaque(true);
+        searchrecord.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchrecordActionPerformed(evt);
+            }
+        });
         jPanel1.add(searchrecord, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 10, 70, 20));
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 30, 220, 10));
 
@@ -170,6 +184,15 @@ public class RecordsPanel extends javax.swing.JPanel {
         accountrecords.setText("");
     }//GEN-LAST:event_accountrecordsMousePressed
 
+    private void searchrecordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchrecordActionPerformed
+        // TODO add your handling code here:
+        
+        
+        getRecords(recordtable,accountrecords.getText());
+        setName(accountrecords.getText());
+        
+    }//GEN-LAST:event_searchrecordActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField accountrecords;
@@ -189,4 +212,81 @@ public class RecordsPanel extends javax.swing.JPanel {
     private javax.swing.JTable recordtable;
     private javax.swing.JButton searchrecord;
     // End of variables declaration//GEN-END:variables
+
+public void getRecords(JTable table, String account){
+    
+            try {
+                clearTable();
+                column1.clear();
+                column2.clear();
+               column3.clear();
+               
+           String query = "SELECT * FROM `consumer_bill` WHERE `consumer_bill`.`Account_Number` = ?";
+                PreparedStatement pr = con.prepareStatement(query);
+                pr.setString(1, account);
+             rs = pr.executeQuery();
+             
+                while (rs.next()) {                    
+                    column1.add(rs.getString("id"));
+                column2.add(rs.getString("Date"));
+                 column3.add(rs.getString("Payment"));
+                 
+                }
+        DefaultTableModel model = (DefaultTableModel) table.getModel();
+                Object[] row = new Object[3];
+                for (int i = 0; i < column1.size(); i++) {
+                    row[0] = column1.get(i);
+                     row[1] = column2.get(i);
+                      row[2] = column3.get(i);
+                       
+                      model.addRow(row);
+                }
+                
+                
+                
+               
+                
+                
+                
+        } catch (SQLException e) {
+            System.out.println("Error: " + e);
+        }
+      
+      
+}
+
+public void clearTable(){
+   DefaultTableModel model = (DefaultTableModel) recordtable.getModel();
+                Object[] row = new Object[3];
+               while (model.getRowCount() > 0) {        
+         for (int i = 0; i < model.getRowCount(); i++) {
+                   
+                      model.removeRow(i);
+                }
+    }
+ 
+}
+
+public void setName(String account){
+
+    try {
+        
+        String query = "SELECT * FROM `consumer` WHERE `consumer`.`Account_Number` = ?";
+                PreparedStatement pr = con.prepareStatement(query);
+                pr.setString(1, account);
+             rs = pr.executeQuery();
+             
+                while (rs.next()) {                    
+                    if (rs.getString("Account_Number").equals(account)) {
+                        placeholder.setText(rs.getString("First_Name") + " " +rs.getString("Last_Name") );
+                    }
+                 
+                }
+    } catch (Exception e) {
+    }
+    
+    
+
+}
+
 }
