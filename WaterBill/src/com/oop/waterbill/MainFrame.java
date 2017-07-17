@@ -36,14 +36,14 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
+        userlogin = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        passwordlogin = new javax.swing.JPasswordField();
         jLabel6 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        loginbutton = new javax.swing.JButton();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -86,16 +86,21 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(34, 45, 65));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextField1.setBackground(new java.awt.Color(34, 45, 65));
-        jTextField1.setForeground(new java.awt.Color(253, 253, 253));
-        jTextField1.setText("Enter your username");
-        jTextField1.setBorder(null);
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+        userlogin.setBackground(new java.awt.Color(34, 45, 65));
+        userlogin.setForeground(new java.awt.Color(253, 253, 253));
+        userlogin.setText("Enter your username");
+        userlogin.setBorder(null);
+        userlogin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                userloginMousePressed(evt);
             }
         });
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 210, 20));
+        userlogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                userloginActionPerformed(evt);
+            }
+        });
+        jPanel1.add(userlogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 210, 20));
 
         jLabel2.setForeground(new java.awt.Color(253, 253, 253));
         jLabel2.setText("USER NAME");
@@ -111,33 +116,38 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel5.setText("PASSWORD");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, -1, -1));
 
-        jPasswordField1.setBackground(new java.awt.Color(34, 45, 65));
-        jPasswordField1.setForeground(new java.awt.Color(253, 253, 253));
-        jPasswordField1.setText("jPasswordField1");
-        jPasswordField1.setBorder(null);
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
+        passwordlogin.setBackground(new java.awt.Color(34, 45, 65));
+        passwordlogin.setForeground(new java.awt.Color(253, 253, 253));
+        passwordlogin.setText("jPasswordField1");
+        passwordlogin.setBorder(null);
+        passwordlogin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                passwordloginMousePressed(evt);
             }
         });
-        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, 230, 10));
+        passwordlogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                passwordloginActionPerformed(evt);
+            }
+        });
+        jPanel1.add(passwordlogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, 230, 10));
 
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(253, 253, 253));
         jLabel6.setText("LOG IN");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, -1, -1));
 
-        jButton3.setBackground(new java.awt.Color(33, 63, 87));
-        jButton3.setForeground(new java.awt.Color(253, 253, 253));
-        jButton3.setText("Log in");
-        jButton3.setContentAreaFilled(false);
-        jButton3.setOpaque(true);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        loginbutton.setBackground(new java.awt.Color(33, 63, 87));
+        loginbutton.setForeground(new java.awt.Color(253, 253, 253));
+        loginbutton.setText("Log in");
+        loginbutton.setContentAreaFilled(false);
+        loginbutton.setOpaque(true);
+        loginbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                loginbuttonActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 90, 40));
+        jPanel1.add(loginbutton, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 90, 40));
 
         jPanel3.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 320, 500));
 
@@ -157,19 +167,19 @@ public class MainFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void userloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userloginActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_userloginActionPerformed
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+    private void passwordloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordloginActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
+    }//GEN-LAST:event_passwordloginActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void loginbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginbuttonActionPerformed
         // TODO add your handling code here:
          int a,d=1;
-String b=jTextField1.getText();
-String c=jPasswordField1.getText();
+String b=userlogin.getText();
+String c=passwordlogin.getText();
    
 a=con.getData(b,c);
 
@@ -183,7 +193,18 @@ else if (a!=1&&d==1){
     JOptionPane.showMessageDialog(null, "Access Not Granted");
     
 }
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_loginbuttonActionPerformed
+
+    private void userloginMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userloginMousePressed
+        // TODO add your handling code here:
+        userlogin.setText("");
+        
+    }//GEN-LAST:event_userloginMousePressed
+
+    private void passwordloginMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_passwordloginMousePressed
+        // TODO add your handling code here:
+         passwordlogin.setText("");
+    }//GEN-LAST:event_passwordloginMousePressed
     
     /**
      * @param args the command line arguments
@@ -221,7 +242,6 @@ else if (a!=1&&d==1){
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -231,9 +251,10 @@ else if (a!=1&&d==1){
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JButton loginbutton;
+    private javax.swing.JPasswordField passwordlogin;
+    private javax.swing.JTextField userlogin;
     // End of variables declaration//GEN-END:variables
 }

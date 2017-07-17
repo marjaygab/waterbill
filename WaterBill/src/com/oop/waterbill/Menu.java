@@ -22,6 +22,7 @@ public class Menu extends javax.swing.JFrame {
      GridBagConstraints c = new GridBagConstraints();
     RecordsPanel records;
     PaymentPanel payment;
+    InputPanel input;
     /**
      * Creates new form Menu
      */
@@ -29,12 +30,14 @@ public class Menu extends javax.swing.JFrame {
         initComponents();
         records = new RecordsPanel();
         payment = new PaymentPanel();
+        input = new InputPanel();
         DynamicPanel.setLayout(layout);
        
         c.gridx = 0;
        c.gridy = 0;
        DynamicPanel.add(payment,c);
        DynamicPanel.add(records,c);
+       DynamicPanel.add(input,c);
         //payment.setVisible(true);
         //records.setVisible(false);
 
@@ -249,10 +252,7 @@ public class Menu extends javax.swing.JFrame {
         inputtext.setForeground(white);
         inputicon.setIcon(new ImageIcon("src\\com\\oop\\waterbill\\Plus_25px.png"));
         inputpanel.setBackground(blue);
-         //DynamicPanel.remove(records);
-        //DynamicPanel.add(payment,c);
-        //DynamicPanel.add(records,c);
-        //payment.setVisible(false);
+       input.setVisible(false);
         records.setVisible(false);
         payment.setVisible(true);
                 break;
@@ -266,7 +266,7 @@ public class Menu extends javax.swing.JFrame {
          //DynamicPanel.remove(payment);
         //DynamicPanel.add(records,c);
        
-       
+       input.setVisible(false);
 records.setVisible(true); 
 payment.setVisible(false);
         break;
@@ -277,7 +277,9 @@ payment.setVisible(false);
         recordtext.setForeground(white);
         recordicon.setIcon(new ImageIcon("src\\com\\oop\\waterbill\\Business Contact_35px_1.png"));
         recordpanel.setBackground(blue);
-        records.setVisible(false);
+        input.setVisible(true);
+records.setVisible(false); 
+payment.setVisible(false);
                 break;
             default:
                 break;

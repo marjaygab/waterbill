@@ -32,39 +32,39 @@ public class PaymentPanel extends javax.swing.JPanel {
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        jTextField1 = new javax.swing.JTextField();
+        accountpayment = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
+        genderpayment = new javax.swing.JTextField();
+        homepayment = new javax.swing.JTextField();
+        firstpayment = new javax.swing.JTextField();
+        middlepayment = new javax.swing.JTextField();
+        previouspayment = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        lastpayment = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        choice1 = new java.awt.Choice();
+        areapaymentcombo = new java.awt.Choice();
         jLabel11 = new javax.swing.JLabel();
-        choice2 = new java.awt.Choice();
+        connectionpaymentcombo = new java.awt.Choice();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
-        choice3 = new java.awt.Choice();
+        agepayment = new javax.swing.JTextField();
+        coordpaymentcombo = new java.awt.Choice();
         jLabel14 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
+        currentpayment = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
+        amountpayment = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
-        jTextField12 = new javax.swing.JTextField();
+        changepayment = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
-        jTextField11 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        meternopayment = new javax.swing.JTextField();
+        clearbuttonpayment = new javax.swing.JButton();
+        confirmbuttonpayment = new javax.swing.JButton();
 
         jLabel1.setText("jLabel1");
 
@@ -83,12 +83,20 @@ public class PaymentPanel extends javax.swing.JPanel {
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, 280, -1));
 
-        jTextField1.setBackground(new java.awt.Color(131, 95, 193));
-        jTextField1.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(186, 186, 188));
-        jTextField1.setText("Enter Account Number");
-        jTextField1.setBorder(null);
-        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, 270, 30));
+        accountpayment.setBackground(new java.awt.Color(131, 95, 193));
+        accountpayment.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        accountpayment.setForeground(new java.awt.Color(186, 186, 188));
+        accountpayment.setText("Enter Account Number");
+        accountpayment.setBorder(null);
+        accountpayment.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                accountpaymentMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                accountpaymentMousePressed(evt);
+            }
+        });
+        jPanel2.add(accountpayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, 270, 30));
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Payments Section");
@@ -116,48 +124,48 @@ public class PaymentPanel extends javax.swing.JPanel {
         jLabel8.setText("Age");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 150, -1, -1));
 
-        jTextField2.setBackground(new java.awt.Color(253, 253, 253));
-        jTextField2.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 170, 40, -1));
+        genderpayment.setBackground(new java.awt.Color(253, 253, 253));
+        genderpayment.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel1.add(genderpayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 170, 40, -1));
 
-        jTextField3.setBackground(new java.awt.Color(253, 253, 253));
-        jTextField3.setForeground(new java.awt.Color(51, 51, 51));
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        homepayment.setBackground(new java.awt.Color(253, 253, 253));
+        homepayment.setForeground(new java.awt.Color(51, 51, 51));
+        homepayment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                homepaymentActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 380, -1));
+        jPanel1.add(homepayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 380, -1));
 
-        jTextField4.setBackground(new java.awt.Color(253, 253, 253));
-        jTextField4.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 170, 110, -1));
+        firstpayment.setBackground(new java.awt.Color(253, 253, 253));
+        firstpayment.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel1.add(firstpayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 170, 110, -1));
 
-        jTextField5.setBackground(new java.awt.Color(253, 253, 253));
-        jTextField5.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 170, 110, -1));
+        middlepayment.setBackground(new java.awt.Color(253, 253, 253));
+        middlepayment.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel1.add(middlepayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 170, 110, -1));
 
-        jTextField6.setBackground(new java.awt.Color(253, 253, 253));
-        jTextField6.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 140, -1));
+        previouspayment.setBackground(new java.awt.Color(253, 253, 253));
+        previouspayment.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel1.add(previouspayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 140, -1));
 
         jLabel9.setForeground(new java.awt.Color(51, 51, 51));
         jLabel9.setText("First Name");
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 150, -1, -1));
 
-        jTextField7.setBackground(new java.awt.Color(253, 253, 253));
-        jTextField7.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 110, -1));
+        lastpayment.setBackground(new java.awt.Color(253, 253, 253));
+        lastpayment.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel1.add(lastpayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 110, -1));
 
         jLabel10.setForeground(new java.awt.Color(51, 51, 51));
         jLabel10.setText("Area");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 220, -1, -1));
-        jPanel1.add(choice1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 244, 110, 24));
+        jPanel1.add(areapaymentcombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 244, 110, 24));
 
         jLabel11.setForeground(new java.awt.Color(51, 51, 51));
         jLabel11.setText("Coordinator");
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, -1, -1));
-        jPanel1.add(choice2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 310, 180, -1));
+        jPanel1.add(connectionpaymentcombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 310, 180, -1));
 
         jLabel12.setForeground(new java.awt.Color(51, 51, 51));
         jLabel12.setText("Previous Bill");
@@ -167,18 +175,18 @@ public class PaymentPanel extends javax.swing.JPanel {
         jLabel13.setText("Type of Connection");
         jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 290, -1, -1));
 
-        jTextField9.setBackground(new java.awt.Color(253, 253, 253));
-        jTextField9.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 170, 40, -1));
-        jPanel1.add(choice3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 312, 145, -1));
+        agepayment.setBackground(new java.awt.Color(253, 253, 253));
+        agepayment.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel1.add(agepayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 170, 40, -1));
+        jPanel1.add(coordpaymentcombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 312, 145, -1));
 
         jLabel14.setForeground(new java.awt.Color(51, 51, 51));
         jLabel14.setText("Meter No.");
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 290, 80, -1));
 
-        jTextField10.setBackground(new java.awt.Color(253, 253, 253));
-        jTextField10.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel1.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 380, 140, -1));
+        currentpayment.setBackground(new java.awt.Color(253, 253, 253));
+        currentpayment.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel1.add(currentpayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 380, 140, -1));
 
         jPanel3.setBackground(new java.awt.Color(131, 95, 193));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -187,17 +195,17 @@ public class PaymentPanel extends javax.swing.JPanel {
         jLabel15.setText("Amount Paid");
         jPanel3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 80, 30));
 
-        jTextField8.setBackground(new java.awt.Color(253, 253, 253));
-        jTextField8.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel3.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 100, -1));
+        amountpayment.setBackground(new java.awt.Color(253, 253, 253));
+        amountpayment.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel3.add(amountpayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 100, -1));
 
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("Change");
         jPanel3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 80, 30));
 
-        jTextField12.setBackground(new java.awt.Color(253, 253, 253));
-        jTextField12.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel3.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, 100, -1));
+        changepayment.setBackground(new java.awt.Color(253, 253, 253));
+        changepayment.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel3.add(changepayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, 100, -1));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 350, 310, 70));
 
@@ -205,25 +213,25 @@ public class PaymentPanel extends javax.swing.JPanel {
         jLabel16.setText("Current Bill");
         jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 360, 80, -1));
 
-        jTextField11.setBackground(new java.awt.Color(253, 253, 253));
-        jTextField11.setForeground(new java.awt.Color(51, 51, 51));
-        jPanel1.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, 70, -1));
+        meternopayment.setBackground(new java.awt.Color(253, 253, 253));
+        meternopayment.setForeground(new java.awt.Color(51, 51, 51));
+        jPanel1.add(meternopayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, 70, -1));
 
-        jButton1.setBackground(new java.awt.Color(131, 95, 193));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Clear");
-        jButton1.setContentAreaFilled(false);
-        jButton1.setOpaque(true);
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 420, 100, 50));
+        clearbuttonpayment.setBackground(new java.awt.Color(131, 95, 193));
+        clearbuttonpayment.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        clearbuttonpayment.setForeground(new java.awt.Color(255, 255, 255));
+        clearbuttonpayment.setText("Clear");
+        clearbuttonpayment.setContentAreaFilled(false);
+        clearbuttonpayment.setOpaque(true);
+        jPanel1.add(clearbuttonpayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 420, 100, 50));
 
-        jButton2.setBackground(new java.awt.Color(131, 95, 193));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Cofirm");
-        jButton2.setContentAreaFilled(false);
-        jButton2.setOpaque(true);
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 100, 50));
+        confirmbuttonpayment.setBackground(new java.awt.Color(131, 95, 193));
+        confirmbuttonpayment.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        confirmbuttonpayment.setForeground(new java.awt.Color(255, 255, 255));
+        confirmbuttonpayment.setText("Cofirm");
+        confirmbuttonpayment.setContentAreaFilled(false);
+        confirmbuttonpayment.setOpaque(true);
+        jPanel1.add(confirmbuttonpayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 100, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -237,17 +245,34 @@ public class PaymentPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void homepaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homepaymentActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_homepaymentActionPerformed
+
+    private void accountpaymentMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_accountpaymentMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_accountpaymentMouseExited
+
+    private void accountpaymentMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_accountpaymentMousePressed
+        // TODO add your handling code here:
+        accountpayment.setText("");
+    }//GEN-LAST:event_accountpaymentMousePressed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private java.awt.Choice choice1;
-    private java.awt.Choice choice2;
-    private java.awt.Choice choice3;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JTextField accountpayment;
+    private javax.swing.JTextField agepayment;
+    private javax.swing.JTextField amountpayment;
+    private java.awt.Choice areapaymentcombo;
+    private javax.swing.JTextField changepayment;
+    private javax.swing.JButton clearbuttonpayment;
+    private javax.swing.JButton confirmbuttonpayment;
+    private java.awt.Choice connectionpaymentcombo;
+    private java.awt.Choice coordpaymentcombo;
+    private javax.swing.JTextField currentpayment;
+    private javax.swing.JTextField firstpayment;
+    private javax.swing.JTextField genderpayment;
+    private javax.swing.JTextField homepayment;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -269,17 +294,9 @@ public class PaymentPanel extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField lastpayment;
+    private javax.swing.JTextField meternopayment;
+    private javax.swing.JTextField middlepayment;
+    private javax.swing.JTextField previouspayment;
     // End of variables declaration//GEN-END:variables
 }
