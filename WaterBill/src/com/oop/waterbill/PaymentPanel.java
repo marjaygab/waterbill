@@ -10,7 +10,7 @@ package com.oop.waterbill;
  * @author User
  */
 public class PaymentPanel extends javax.swing.JPanel {
-
+    PaymentConnection payc= new PaymentConnection();
     /**
      * Creates new form PaymentPanel
      */
@@ -97,18 +97,37 @@ public class PaymentPanel extends javax.swing.JPanel {
                 accountpaymentMousePressed(evt);
             }
         });
+        accountpayment.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                accountpaymentActionPerformed(evt);
+            }
+        });
         jPanel2.add(accountpayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, 270, 30));
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Payments Section");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
 
+<<<<<<< HEAD
         enterbuttonpayment.setBackground(new java.awt.Color(253, 253, 253));
         enterbuttonpayment.setForeground(new java.awt.Color(131, 95, 193));
         enterbuttonpayment.setText("Enter");
         enterbuttonpayment.setContentAreaFilled(false);
         enterbuttonpayment.setOpaque(true);
         jPanel2.add(enterbuttonpayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 30, -1, -1));
+=======
+        jButton1.setBackground(new java.awt.Color(253, 253, 253));
+        jButton1.setForeground(new java.awt.Color(131, 95, 193));
+        jButton1.setText("Enter");
+        jButton1.setContentAreaFilled(false);
+        jButton1.setOpaque(true);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 30, -1, -1));
+>>>>>>> !singlebulk
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 690, 90));
 
@@ -163,6 +182,11 @@ public class PaymentPanel extends javax.swing.JPanel {
 
         lastpayment.setBackground(new java.awt.Color(253, 253, 253));
         lastpayment.setForeground(new java.awt.Color(51, 51, 51));
+        lastpayment.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lastpaymentActionPerformed(evt);
+            }
+        });
         jPanel1.add(lastpayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 130, -1));
 
         jLabel10.setForeground(new java.awt.Color(51, 51, 51));
@@ -265,6 +289,29 @@ public class PaymentPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         accountpayment.setText("");
     }//GEN-LAST:event_accountpaymentMousePressed
+
+    private void accountpaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_accountpaymentActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_accountpaymentActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+     String accountnumber=accountpayment.getText();
+     
+     
+     payc.getAccountNumber(accountnumber);
+     lastpayment.setText(payc.getLast());
+     middlepayment.setText(payc.getMiddle());
+     firstpayment.setText(payc.getFirst());
+     agepayment.setText(payc.getAge());
+     genderpayment.setText(payc.getGender());
+     homepayment.setText(payc.getAddress());
+     meternopayment.setText(payc.getMeterNo());
+     
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void lastpaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lastpaymentActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lastpaymentActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
