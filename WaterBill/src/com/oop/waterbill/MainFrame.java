@@ -12,7 +12,11 @@ import javax.swing.JOptionPane;
  * @author User
  */
 public class MainFrame extends javax.swing.JFrame {
-    Login con=new Login();
+    private final Login con = new Login();
+
+    public Login getCon() {
+        return con;
+    }
 
     /**
      * Creates new form MainFrame

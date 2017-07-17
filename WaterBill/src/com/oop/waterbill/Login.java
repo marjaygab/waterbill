@@ -16,7 +16,21 @@ public class Login {
        private Connection con;
     private Statement st;
     private ResultSet rs;
+
+    public Connection getCon() {
+        return con;
+    }
+
+    public ResultSet getRs() {
+        return rs;
+    }
+
+    public Statement getSt() {
+        return st;
+    }
   
+    
+    
     public Login() {
         try{
         Class.forName("com.mysql.jdbc.Driver");
