@@ -58,6 +58,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="lastsingleinternal">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="fd" green="fd" red="fd" type="rgb"/>
             </Property>
@@ -73,6 +74,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="firstsingleinternal">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="fd" green="fd" red="fd" type="rgb"/>
             </Property>
@@ -101,6 +103,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="middlesingleinternal">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="fd" green="fd" red="fd" type="rgb"/>
             </Property>
@@ -129,6 +132,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="agesingleinternal">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="fd" green="fd" red="fd" type="rgb"/>
             </Property>
@@ -188,6 +192,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="gendersingleinternal">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="fd" green="fd" red="fd" type="rgb"/>
             </Property>
@@ -216,6 +221,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="homesingleinternal">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="fd" green="fd" red="fd" type="rgb"/>
             </Property>
@@ -284,6 +290,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="metersingleinternal">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="fd" green="fd" red="fd" type="rgb"/>
             </Property>
@@ -449,6 +456,9 @@
                 <Property name="contentAreaFilled" type="boolean" value="false"/>
                 <Property name="opaque" type="boolean" value="true"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clearbuttoninternalActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="finishbuttoninternal">
               <Properties>
@@ -481,9 +491,25 @@
                 <Property name="contentAreaFilled" type="boolean" value="false"/>
                 <Property name="opaque" type="boolean" value="true"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="confirmbuttoninternalActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
+        <Component class="javax.swing.JButton" name="jButton1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Ok"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+          </Events>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="170" y="60" width="50" height="20"/>
+            </Constraint>
+          </Constraints>
+        </Component>
       </SubComponents>
     </Container>
   </SubComponents>
